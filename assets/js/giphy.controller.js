@@ -62,18 +62,19 @@ $( '#button-container' ).on( 'click', '.btn', function()
 	giphyService.getGiphy(  $( this ).attr( 'data' ), giphyController.addGifToView );
 });
 
-$( '#submit-button' ).on( 'click', function()
+$( '#submit-button' ).on( 'click', function( tEvent )
 {
-	console.log( 'huh' );
+	//prevent the form from submitting
+	tEvent.preventDefault();
 
 	var submitButton = $( this );
-	var tempValue = $( '#add-button' ).val();
+	var tempValue = $( '#add-button-input' ).val();
 
 	console.log( tempValue );
 
-	giphyService.push( tempValue );
-	giphyService.getGiphy( tempValue );
-	giphyService.renderButtons();
+	giphyService.data.push( tempValue );
+	giphyService.getGiphy( tempValue, giphyController.addGifToView );
+	giphyController.renderButtons();
 });
 
 //START
