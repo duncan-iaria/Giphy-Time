@@ -17,14 +17,22 @@
 	<div class="container">
 		<header>Header</header>
 		<nav id="button-container">
-			<button class="btn btn-primary btn-lg" id="testButton">Test</button>
 		</nav>
 		<main id="gif-container">
 			GIPHY TIME
 		</main>
+	
+		<form>
+			<div class="form-group">
+				<label for="add-button"></label>
+				<input type="text" id="add-button" class="form-control" placeholder="Whatchoo like?">
+			</div>
+			<button id="submit-button" class="btn btn-default btn-lg">submit</button>
+		</form>
+
 		
 	</div>
-	
+
 	<!-- GIPHY PROJECT LOGIC -->
 	<script type="text/javascript" src="assets/js/giphy.service.js"></script>
 	<script type="text/javascript" src="assets/js/giphy.controller.js"></script>

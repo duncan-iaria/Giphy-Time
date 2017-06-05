@@ -13,7 +13,8 @@ var giphyService = ( function()
 	//global access
 	var publicAPI =
 	{
-		getGiphy: giphyRequest
+		getGiphy: giphyRequest,
+		data: data
 	}
 
 	return publicAPI;
@@ -30,21 +31,17 @@ var giphyService = ( function()
 		$.ajax( { url: tempQueryUrl, type: "GET", } )
 		.done( function( tResponse )
 		{
-			console.log( tResponse );
+			//console.log( tResponse );
 			processRequest( tResponse.data, tCallback );
 		});
 	}
 
 	function processRequest( tData, tCallback )
 	{
-		//console.log( 'uh hey?' );
 		var tempData = [];
-
-		console.log( tData[0].images );
 
 		for( var i = 0; i < tData.length; i++ )
 		{
-			console.log( tData[i].images.fixed_height.url );
 			var tempGif = 
 			{
 				stillUrl: tData[i].images.fixed_height_still.url,
