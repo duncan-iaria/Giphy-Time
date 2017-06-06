@@ -111,7 +111,7 @@ $( '#submit-button' ).on( 'click', function( tEvent )
 	if( !tempValue )
 	{
 		//return is tempValue is null (user has not entered text)
-		giphyController.view.feedbackView.text( 'can not search for NOTHING, put something in the bar above!' );
+		giphyController.view.feedbackView.text( 'Put a search term in the bar above!' );
 		return;
 	}
 	else
@@ -121,6 +121,8 @@ $( '#submit-button' ).on( 'click', function( tEvent )
 			//if the topic has already been searched - return
 			if( tempValue === giphyService.data[i] )
 			{
+				giphyController.view.feedbackView.text( 'You already searched for that!' );
+				giphyController.view.feedbackView.addClass( 'has-error' );
 				return;
 			}
 		}
