@@ -1,0 +1,93 @@
+/*custom styling for giphy time*/
+html 
+{
+    position: relative;
+    min-height: 100%;
+}
+
+body
+{
+	font-size: 18px;
+	font-family: 'Poiret One', cursive;
+
+	margin: 0 0 80px;
+}
+
+header
+{
+	margin-top: 20px;
+}
+
+header > h1
+{
+	font-family: 'Barrio', cursive;
+}
+
+h1, h2, h3
+{
+	font-weight: bold;
+}
+
+h1
+{
+	font-size: 2em;
+}
+
+h2
+{
+	font-size: 1.75em;
+}
+
+h3
+{
+	font-size: 1.5em;
+}
+
+footer
+{
+    position: absolute;
+    left: 15%;
+    bottom: 0;
+    height: 50px;
+    width: 70%;
+    margin-bottom: 30px;
+}
+
+#feedback
+{
+	margin-bottom: 12px;
+}
+
+.gif-item
+{
+	display: inline-block;
+	margin-right: 6px;
+	margin-top: 6px;
+	margin-bottom: 10px;
+}
+
+.btn-gif
+{
+	margin: 6px;
+}
+
+.gif-flex-container
+{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.center-text
+{
+	text-align: center;
+}
+
+#submit-button
+{
+	width: 100%;
+}
+
