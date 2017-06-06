@@ -6,7 +6,7 @@ var giphyService = ( function()
 
 	//api vars
 	var apiKey = 'dc6zaTOxFJmzC';
-	var queryUrl = 'http://api.giphy.com/v1/gifs/search?'
+	var queryUrl = 'https://api.giphy.com/v1/gifs/search?'
 	var parameters = {};
 	var gifReturnLimit = 10;
 
