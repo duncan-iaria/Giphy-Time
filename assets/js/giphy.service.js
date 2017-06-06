@@ -31,7 +31,7 @@ var giphyService = ( function()
 		$.ajax( { url: tempQueryUrl, type: "GET", } )
 		.done( function( tResponse )
 		{
-			//console.log( tResponse );
+			console.log( tResponse );
 			processRequest( tResponse.data, tCallback );
 		});
 	}
@@ -45,7 +45,8 @@ var giphyService = ( function()
 			var tempGif = 
 			{
 				stillUrl: tData[i].images.fixed_height_still.url,
-				animatedUrl: tData[i].images.fixed_height.url
+				animatedUrl: tData[i].images.fixed_height.url,
+				rating: tData[i].rating
 			}
 
 			tempData.push( tempGif );
